@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{93E0B9D1-7739-4169-A266-6197755440E4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>HoneycombGE</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\C-lib\ASSIMP\include;C:\C-lib\SOIL\src;C:\C-lib\OpenGL\GLFW\glfw-3.2.1.bin.WIN32\include;C:\C-lib\OpenGL\GLEW\glew-2.0.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\OpenGL\GLFW\glfw-3.2.1.bin.WIN32\lib-vc2015;C:\OpenGL\GLEW\glew-2.0.0\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <Lib>
+      <AdditionalDependencies>assimp-vc140-mt.lib;opengl32.lib;glew32.lib;glfw3.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>C:\C-lib\ASSIMP\build\code\Debug;C:\C-lib\SOIL\lib;C:\C-lib\OpenGL\GLFW\glfw-3.2.1.bin.WIN32\lib-vc2015;C:\C-lib\OpenGL\GLEW\glew-2.0.0\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/IGNORE:4006,4221 %(AdditionalOptions)</AdditionalOptions>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\C-lib\ASSIMP\include;C:\C-lib\SOIL\src;C:\C-lib\OpenGL\GLFW\glfw-3.2.1.bin.WIN32\include;C:\C-lib\OpenGL\GLEW\glew-2.0.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\OpenGL\GLFW\glfw-3.2.1.bin.WIN32\lib-vc2015;C:\OpenGL\GLEW\glew-2.0.0\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <Lib>
+      <AdditionalDependencies>assimp-vc140-mt.lib;opengl32.lib;glew32.lib;glfw3.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>C:\C-lib\ASSIMP\build\code\Debug;C:\C-lib\SOIL\lib;C:\C-lib\OpenGL\GLFW\glfw-3.2.1.bin.WIN32\lib-vc2015;C:\C-lib\OpenGL\GLEW\glew-2.0.0\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/IGNORE:4006,4221 %(AdditionalOptions)</AdditionalOptions>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\C-lib\ASSIMP\include;C:\C-lib\SOIL\src;C:\C-lib\OpenGL\GLFW\glfw-3.2.1.bin.WIN32\include;C:\C-lib\OpenGL\GLEW\glew-2.0.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\OpenGL\GLFW\glfw-3.2.1.bin.WIN32\lib-vc2015;C:\OpenGL\GLEW\glew-2.0.0\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <Lib>
+      <AdditionalDependencies>assimp-vc140-mt.lib;opengl32.lib;glew32.lib;glfw3.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>C:\C-lib\ASSIMP\build\code\Debug;C:\C-lib\SOIL\lib;C:\C-lib\OpenGL\GLFW\glfw-3.2.1.bin.WIN32\lib-vc2015;C:\C-lib\OpenGL\GLEW\glew-2.0.0\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/IGNORE:4006,4221 %(AdditionalOptions)</AdditionalOptions>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\C-lib\ASSIMP\include;C:\C-lib\SOIL\src;C:\C-lib\OpenGL\GLFW\glfw-3.2.1.bin.WIN32\include;C:\C-lib\OpenGL\GLEW\glew-2.0.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\OpenGL\GLFW\glfw-3.2.1.bin.WIN32\lib-vc2015;C:\OpenGL\GLEW\glew-2.0.0\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <Lib>
+      <AdditionalDependencies>assimp-vc140-mt.lib;opengl32.lib;glew32.lib;glfw3.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>C:\C-lib\ASSIMP\build\code\Debug;C:\C-lib\SOIL\lib;C:\C-lib\OpenGL\GLFW\glfw-3.2.1.bin.WIN32\lib-vc2015;C:\C-lib\OpenGL\GLEW\glew-2.0.0\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/IGNORE:4006,4221 %(AdditionalOptions)</AdditionalOptions>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\base\BaseGame.cpp" />
+    <ClCompile Include="src\base\GameInput.cpp" />
+    <ClCompile Include="src\base\BaseMain.cpp" />
+    <ClCompile Include="src\base\GameTime.cpp" />
+    <ClCompile Include="src\base\GameWindow.cpp" />
+    <ClCompile Include="src\base\GLErrorException.cpp" />
+    <ClCompile Include="src\base\GLItem.cpp" />
+    <ClCompile Include="src\component\light\PointLight.cpp" />
+    <ClCompile Include="src\component\light\SpotLight.cpp" />
+    <ClCompile Include="src\conjuncture\Event.cpp" />
+    <ClCompile Include="src\conjuncture\EventHandler.cpp" />
+    <ClCompile Include="src\file\ImageIO.cpp" />
+    <ClCompile Include="src\file\LineOperation.cpp" />
+    <ClCompile Include="src\graphics\Cubemap.cpp" />
+    <ClCompile Include="src\graphics\TextureEnums.cpp" />
+    <ClCompile Include="src\render\deferred\DeferredRenderer.cpp" />
+    <ClCompile Include="src\render\deferred\GBuffer.cpp" />
+    <ClCompile Include="src\render\Renderer.cpp" />
+    <ClCompile Include="src\render\RenderingEngine.cpp" />
+    <ClCompile Include="src\scene\GameScene.cpp" />
+    <ClCompile Include="src\debug\Logger.cpp" />
+    <ClCompile Include="src\file\FileIO.cpp" />
+    <ClCompile Include="src\geometry\Model.cpp" />
+    <ClCompile Include="src\graphics\Material.cpp" />
+    <ClCompile Include="src\graphics\Texture2D.cpp" />
+    <ClCompile Include="src\component\light\AmbientLight.cpp" />
+    <ClCompile Include="src\component\light\BaseLight.cpp" />
+    <ClCompile Include="src\component\light\DirectionalLight.cpp" />
+    <ClCompile Include="src\math\MathUtils.cpp" />
+    <ClCompile Include="src\math\Matrix4f.cpp" />
+    <ClCompile Include="src\math\Quaternion.cpp" />
+    <ClCompile Include="src\math\Vector2f.cpp" />
+    <ClCompile Include="src\math\Vector3f.cpp" />
+    <ClCompile Include="src\geometry\Mesh.cpp" />
+    <ClCompile Include="src\component\render\MeshRenderer.cpp" />
+    <ClCompile Include="src\geometry\Vertex.cpp" />
+    <ClCompile Include="src\component\GameComponent.cpp" />
+    <ClCompile Include="src\math\Vector4f.cpp" />
+    <ClCompile Include="src\object\GameObjectFactory.cpp" />
+    <ClCompile Include="src\object\GameObject.cpp" />
+    <ClCompile Include="src\component\physics\Transform.cpp" />
+    <ClCompile Include="src\component\render\CameraController.cpp" />
+    <ClCompile Include="src\shader\GenericStruct.cpp" />
+    <ClCompile Include="src\shader\ShaderSource.cpp" />
+    <ClCompile Include="src\shader\ShaderProgram.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\base\BaseGame.h" />
+    <ClInclude Include="include\base\GameInput.h" />
+    <ClInclude Include="include\base\BaseMain.h" />
+    <ClInclude Include="include\base\GameTime.h" />
+    <ClInclude Include="include\base\GameWindow.h" />
+    <ClInclude Include="include\base\GLErrorException.h" />
+    <ClInclude Include="include\base\GLItem.h" />
+    <ClInclude Include="include\component\light\PointLight.h" />
+    <ClInclude Include="include\component\light\SpotLight.h" />
+    <ClInclude Include="include\conjuncture\Event.h" />
+    <ClInclude Include="include\conjuncture\EventHandler.h" />
+    <ClInclude Include="include\file\ImageIO.h" />
+    <ClInclude Include="include\file\LineOperation.h" />
+    <ClInclude Include="include\graphics\Cubemap.h" />
+    <ClInclude Include="include\graphics\TextureEnums.h" />
+    <ClInclude Include="include\render\deferred\DeferredRenderer.h" />
+    <ClInclude Include="include\render\deferred\GBuffer.h" />
+    <ClInclude Include="include\render\Renderer.h" />
+    <ClInclude Include="include\render\RenderingEngine.h" />
+    <ClInclude Include="include\scene\GameScene.h" />
+    <ClInclude Include="include\debug\Logger.h" />
+    <ClInclude Include="include\file\FileIO.h" />
+    <ClInclude Include="include\geometry\Model.h" />
+    <ClInclude Include="include\graphics\Material.h" />
+    <ClInclude Include="include\graphics\Texture2D.h" />
+    <ClInclude Include="include\component\light\AmbientLight.h" />
+    <ClInclude Include="include\component\light\BaseLight.h" />
+    <ClInclude Include="include\component\light\DirectionalLight.h" />
+    <ClInclude Include="include\HoneycombEngine.h" />
+    <ClInclude Include="include\math\MathUtils.h" />
+    <ClInclude Include="include\math\Matrix4f.h" />
+    <ClInclude Include="include\math\Quaternion.h" />
+    <ClInclude Include="include\math\Vector2f.h" />
+    <ClInclude Include="include\math\Vector3f.h" />
+    <ClInclude Include="include\geometry\Mesh.h" />
+    <ClInclude Include="include\component\render\MeshRenderer.h" />
+    <ClInclude Include="include\geometry\Vertex.h" />
+    <ClInclude Include="include\component\GameComponent.h" />
+    <ClInclude Include="include\math\Vector4f.h" />
+    <ClInclude Include="include\object\GameObjectFactory.h" />
+    <ClInclude Include="include\object\GameObject.h" />
+    <ClInclude Include="include\component\physics\Transform.h" />
+    <ClInclude Include="include\component\render\CameraController.h" />
+    <ClInclude Include="include\shader\GenericStruct.h" />
+    <ClInclude Include="include\shader\ShaderSource.h" />
+    <ClInclude Include="include\shader\ShaderProgram.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\shaders\cubemap\skyboxFS.glsl" />
+    <None Include="res\shaders\cubemap\skyboxVS.glsl" />
+    <None Include="res\shaders\cubemap\solidColorSkyboxFS.glsl" />
+    <None Include="res\shaders\cubemap\texturedSkyboxFS.glsl" />
+    <None Include="res\shaders\defGeometryFS.glsl" />
+    <None Include="res\shaders\defGeometryVS.glsl" />
+    <None Include="res\shaders\phong\fragShader.glsl" />
+    <None Include="res\shaders\phong\phongAmbientFragment.glsl" />
+    <None Include="res\shaders\phong\phongAmbientVertex.glsl" />
+    <None Include="res\shaders\phong\phongDirectionalFragment.glsl" />
+    <None Include="res\shaders\phong\phongDirectionalVertex.glsl" />
+    <None Include="res\shaders\phong\phongFragment.glsl" />
+    <None Include="res\shaders\phong\phongPointFragment.glsl" />
+    <None Include="res\shaders\phong\phongPointVertex.glsl" />
+    <None Include="res\shaders\phong\phongSpotFragment.glsl" />
+    <None Include="res\shaders\phong\phongSpotVertex.glsl" />
+    <None Include="res\shaders\phong\phongVertex.glsl" />
+    <None Include="res\shaders\phong\vertexShader.glsl" />
+    <None Include="res\shaders\post-processing\gaussBlur3FS.glsl" />
+    <None Include="res\shaders\post-processing\gaussBlur5FS.glsl" />
+    <None Include="res\shaders\post-processing\gaussBlur7FS.glsl" />
+    <None Include="res\shaders\post-processing\gaussBlur9FS.glsl" />
+    <None Include="res\shaders\post-processing\grayscaleFS.glsl" />
+    <None Include="res\shaders\post-processing\inversionFS.glsl" />
+    <None Include="res\shaders\post-processing\postProcessingVS.glsl" />
+    <None Include="res\shaders\post-processing\sharpFS.glsl" />
+    <None Include="res\shaders\render\antialiasing\fxaa\fxaaFS.glsl" />
+    <None Include="res\shaders\render\antialiasing\fxaa\fxaaVS.glsl" />
+    <None Include="res\shaders\render\shadow\classic\cShadowMapFS.glsl" />
+    <None Include="res\shaders\render\shadow\classic\cShadowMapLinearFS.glsl" />
+    <None Include="res\shaders\render\shadow\classic\cShadowMapVS.glsl" />
+    <None Include="res\shaders\render\shadow\variance\vShadowMapFS.glsl" />
+    <None Include="res\shaders\render\shadow\variance\vShadowMapLinearFS.glsl" />
+    <None Include="res\shaders\render\shadow\variance\vShadowMapVS.glsl" />
+    <None Include="res\shaders\standard\light\shadows2d\shadowHard.glsl" />
+    <None Include="res\shaders\standard\light\shadows2d\shadowInterpolated.glsl" />
+    <None Include="res\shaders\standard\light\shadows2d\shadowPCF.glsl" />
+    <None Include="res\shaders\standard\light\shadows2d\shadowPCFInterpolated.glsl" />
+    <None Include="res\shaders\standard\light\shadows2d\shadowVariance.glsl" />
+    <None Include="res\shaders\standard\structs\light\stdAmbientLight.glsl" />
+    <None Include="res\shaders\standard\structs\light\stdBaseLight.glsl" />
+    <None Include="res\shaders\standard\structs\light\stdDirectionalLight.glsl" />
+    <None Include="res\shaders\standard\structs\light\stdPointLight.glsl" />
+    <None Include="res\shaders\standard\structs\light\stdSpotLight.glsl" />
+    <None Include="res\shaders\util\math.glsl" />
+    <None Include="res\shaders\util\packing.glsl" />
+    <None Include="res\shaders\render\deferred\light\blinn-phong\ambientLightFS.glsl" />
+    <None Include="res\shaders\render\deferred\light\blinn-phong\directionalLightFS.glsl" />
+    <None Include="res\shaders\render\deferred\light\blinn-phong\spotLightFS.glsl" />
+    <None Include="res\shaders\render\deferred\geometry\geometryFS.glsl" />
+    <None Include="res\shaders\render\deferred\geometry\geometryVS.glsl" />
+    <None Include="res\shaders\render\deferred\light\blinn-phong\pointLightFS.glsl" />
+    <None Include="res\shaders\render\deferred\light\blinn-phong\lightVS.glsl" />
+    <None Include="res\shaders\render\deferred\geometry\simpleFS.glsl" />
+    <None Include="res\shaders\render\deferred\geometry\simpleVS.glsl" />
+    <None Include="res\shaders\render\deferred\geometry\stencilFS.glsl" />
+    <None Include="res\shaders\render\deferred\geometry\stencilVS.glsl" />
+    <None Include="res\shaders\render\gamma\gammaFS.glsl" />
+    <None Include="res\shaders\render\gamma\gammaVS.glsl" />
+    <None Include="res\shaders\simple\fragShader.glsl" />
+    <None Include="res\shaders\simple\vertexShader.glsl" />
+    <None Include="res\shaders\standard\light\blinn-phong\blinnPhongAmbient.glsl" />
+    <None Include="res\shaders\standard\light\blinn-phong\blinnPhongBase.glsl" />
+    <None Include="res\shaders\standard\light\blinn-phong\blinnPhongDirectional.glsl" />
+    <None Include="res\shaders\standard\light\blinn-phong\blinnPhongPoint.glsl" />
+    <None Include="res\shaders\standard\light\blinn-phong\blinnPhongSpot.glsl" />
+    <None Include="res\shaders\standard\structs\stdCamera.glsl" />
+    <None Include="res\shaders\standard\include\stdLight.glh" />
+    <None Include="res\shaders\standard\include\stdLight.glsl" />
+    <None Include="res\shaders\standard\include\stdMaterial.glh" />
+    <None Include="res\shaders\standard\structs\stdMaterial.glsl" />
+    <None Include="res\shaders\standard\vertex\stdVertexVS.glsl" />
+    <None Include="res\shaders\standard\vertex\stdVertexFS.glsl" />
+    <None Include="res\shaders\standard\source\light\stdAmbientLight.glc" />
+    <None Include="res\shaders\standard\source\light\stdAmbientLight.glsl" />
+    <None Include="res\shaders\standard\source\light\stdDirectionalLight.glc" />
+    <None Include="res\shaders\standard\source\light\stdDirectionalLight.glsl" />
+    <None Include="res\shaders\standard\source\light\stdPointLight.glc" />
+    <None Include="res\shaders\standard\source\light\stdPointLight.glsl" />
+    <None Include="res\shaders\standard\source\light\stdSpotLight.glc" />
+    <None Include="res\shaders\standard\source\light\stdSpotLight.glsl" />
+    <None Include="res\shaders\standard\source\vertex\stdVertex.glc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
